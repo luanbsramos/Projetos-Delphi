@@ -1,0 +1,104 @@
+unit U_consultaBairro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TfrmConsultaBairro = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    DBGrid1: TDBGrid;
+    edt_alt: TButton;
+    edt_canc: TButton;
+    edt_exc: TButton;
+    edt_ant: TButton;
+    edt_pro: TButton;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    btn_sav: TButton;
+    procedure habilitarcampos;
+    procedure desabilitarcampos;
+
+
+
+
+    procedure edt_altClick(Sender: TObject);
+    procedure edt_cancClick(Sender: TObject);
+    procedure edt_excClick(Sender: TObject);
+    procedure btn_savClick(Sender: TObject);
+    procedure edt_antClick(Sender: TObject);
+    procedure edt_proClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  bairro : integer;
+  frmConsultaBairro: TfrmConsultaBairro;
+
+implementation
+
+{$R *.dfm}
+
+  uses U_datamodulo;
+{ TfrmConsultaBairro }
+
+procedure TfrmConsultaBairro.btn_savClick(Sender: TObject);
+begin
+  dm.tb_bairro.Post;
+  bairro:= 1;
+end;
+
+procedure TfrmConsultaBairro.desabilitarcampos;
+begin
+
+  DBGrid1.ReadOnly:= true;
+end;
+
+procedure TfrmConsultaBairro.edt_altClick(Sender: TObject);
+begin
+  dm.tb_bairro.Edit;
+end;
+
+procedure TfrmConsultaBairro.edt_antClick(Sender: TObject);
+begin
+  dm.tb_bairro.Prior;
+end;
+
+procedure TfrmConsultaBairro.edt_cancClick(Sender: TObject);
+begin
+  dm.tb_bairro.Cancel;
+end;
+
+
+
+
+
+procedure TfrmConsultaBairro.edt_excClick(Sender: TObject);
+begin
+  dm.tb_bairro.Delete;
+end;
+
+
+
+
+procedure TfrmConsultaBairro.edt_proClick(Sender: TObject);
+begin
+  dm.tb_bairro.Next;
+end;
+
+procedure TfrmConsultaBairro.habilitarcampos;
+begin
+  DBGrid1.ReadOnly:= false;
+  
+end;
+
+end.

@@ -1,0 +1,24 @@
+program Prj_Contabilidade;
+
+uses
+  Vcl.Forms,
+  U_principal in 'U_principal.pas' {frm_principal},
+  U_bairro in 'U_bairro.pas' {frmBairro},
+  U_cidade in 'U_cidade.pas' {frmCidade},
+  U_cliente in 'U_cliente.pas' {frmCliente},
+  U_operacao in 'U_operacao.pas' {frmOperacao},
+  U_consultaBairro in 'U_consultaBairro.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Tfrm_principal, frm_principal);
+  Application.CreateForm(TfrmBairro, frmBairro);
+  Application.CreateForm(TfrmCidade, frmCidade);
+  Application.CreateForm(TfrmCliente, frmCliente);
+  Application.CreateForm(TfrmOperacao, frmOperacao);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

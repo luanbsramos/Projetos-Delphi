@@ -1,0 +1,157 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 344
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 635
+    Height = 105
+    Align = alTop
+    Caption = 'CLIENTES'
+    Color = clSkyBlue
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -48
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 105
+    Width = 635
+    Height = 239
+    Align = alClient
+    TabOrder = 1
+    ExplicitLeft = 152
+    ExplicitTop = 208
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object Label1: TLabel
+      Left = 24
+      Top = 14
+      Width = 68
+      Height = 23
+      Caption = 'Clientes'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+    end
+    object DBGrid1: TDBGrid
+      Left = 24
+      Top = 41
+      Width = 561
+      Height = 190
+      DataSource = DataModule1.ds_cliente
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'id'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_nome'
+          Title.Caption = 'Nome'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_cpf'
+          Title.Caption = 'CPF'
+          Width = 80
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_cnpj'
+          Title.Caption = 'CNPJ'
+          Width = 80
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_rg'
+          Title.Caption = 'RG'
+          Width = 80
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_ie'
+          Title.Caption = 'Inscri'#231#227'o Estadual'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_tel'
+          Title.Caption = 'Telefone'
+          Width = 80
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_cel'
+          Title.Caption = 'Celular'
+          Width = 80
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_nasc'
+          Title.Caption = 'Data de Nascimento'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_abertura'
+          Title.Caption = 'Data de Abertura'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_bairro'
+          Title.Caption = 'Bairro'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cli_cidade'
+          Title.Caption = 'Cidade'
+          Visible = True
+        end>
+    end
+    object Edit1: TEdit
+      Left = 96
+      Top = 16
+      Width = 489
+      Height = 21
+      TabOrder = 1
+    end
+  end
+end

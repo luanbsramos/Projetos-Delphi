@@ -1,0 +1,113 @@
+object frmConsultaBairro: TfrmConsultaBairro
+  Left = 0
+  Top = 0
+  Caption = 'frmConsultaBairro'
+  ClientHeight = 398
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 635
+    Height = 105
+    Align = alTop
+    Caption = 'BAIRROS'
+    Color = clSkyBlue
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -48
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 105
+    Width = 635
+    Height = 293
+    Align = alClient
+    TabOrder = 1
+    ExplicitHeight = 248
+    object DBGrid1: TDBGrid
+      Left = 32
+      Top = 29
+      Width = 569
+      Height = 204
+      DataSource = dm.ds_bairro
+      ReadOnly = True
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Id'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'bai_nome'
+          Title.Caption = 'Bairro'
+          Visible = True
+        end>
+    end
+    object edt_edit: TButton
+      Left = 104
+      Top = 248
+      Width = 75
+      Height = 25
+      Caption = 'Editar'
+      TabOrder = 1
+      OnClick = edt_editClick
+    end
+    object edt_salvar: TButton
+      Left = 216
+      Top = 248
+      Width = 75
+      Height = 25
+      Caption = 'Salvar'
+      TabOrder = 2
+      OnClick = edt_salvarClick
+    end
+    object edt_cancelar: TButton
+      Left = 336
+      Top = 248
+      Width = 75
+      Height = 25
+      Caption = 'Cancelar'
+      TabOrder = 3
+      OnClick = edt_cancelarClick
+    end
+    object edt_excluir: TButton
+      Left = 456
+      Top = 248
+      Width = 75
+      Height = 25
+      Caption = 'Excluir'
+      TabOrder = 4
+      OnClick = edt_excluirClick
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 171
+      Top = -2
+      Width = 240
+      Height = 25
+      DataSource = dm.ds_bairro
+      TabOrder = 5
+    end
+  end
+end
